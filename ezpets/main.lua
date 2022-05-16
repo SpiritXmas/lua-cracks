@@ -1,31 +1,18 @@
-local lclosure_index = 0
-local old; old = hookfunction(islclosure, function(closure)
-    lclosure_index = lclosure_index + 1
-    if lclosure_index == 4 then return true elseif lclosure_index < 8 then return false end
-    
-    return old(closure)
-end)
-
-hookfunction(os.time, function(...) return 2 end)
-hookfunction(os.date, function(...) return "" end)
-
 local base_url = "https://raw.githubusercontent.com/SpiritXmas/lua-cracks/main/ezpets/"
 
-local old; old = hookfunction(game.HttpGet, function(...)
-    local args = {...}
-    local url = args[2]
-    
+local old; old = hookfunction(game.HttpGet, function(self, url)
     if url:match("versions.txt") then
-        args[2] = base_url.."versions.txt"
+        url = base_url.."versions.txt"
     elseif url:match("VenyxUI.lua") then
-        args[2] = base_url.."venyxui.lua"
+        url = base_url.."venyxui.lua"
     elseif url:match("AkaliNotif.lua") then
-        args[2] = base_url.."akalinotif.lua"
+        url = base_url.."akalinotif.lua"
     elseif url:match("verify") then
-        return "309569542"
+        local ostime = os.time()
+        return tostring((ostime*2+154784767)*math.max(string.sub(ostime, -1), 1))
     end
 
-    return old(unpack(args))
+    return old(self, url)
 end)
 
 _, Protected_by_MoonSecV2, Discord = 'discord.gg/gQEH2uZxUk'

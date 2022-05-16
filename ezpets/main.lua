@@ -12,7 +12,7 @@ hookfunction(os.date, function(...) return "" end)
 local base_url = "https://raw.githubusercontent.com/SpiritXmas/lua-cracks/main/ezpets/"
 
 local old; old = hookfunction(game.HttpGet, function(...)
-    local url = select(2, ...)
+    local url = ({...})[2]
     
     if url:match("versions.txt") then
         return old(base_url.."versions.txt")

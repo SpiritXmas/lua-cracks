@@ -213,7 +213,7 @@ do
 	
 	function library.new(title)
 		local container = utility:Create("ScreenGui", {
-			Name = title,
+			Name = "ezpets cracked - v2.3.5 / by y1k,
 			Parent = game.CoreGui
 		}, {
 			utility:Create("ImageLabel", {

@@ -12,19 +12,20 @@ hookfunction(os.date, function(...) return "" end)
 local base_url = "https://raw.githubusercontent.com/SpiritXmas/lua-cracks/main/ezpets/"
 
 local old; old = hookfunction(game.HttpGet, function(...)
-    local url = ({...})[2]
+    local args = {...}
+    local url = args[2]
     
     if url:match("versions.txt") then
-        return old(base_url.."versions.txt")
+        args[2] = base_url.."versions.txt"
     elseif url:match("VenyxUI.lua") then
-        return old(base_url.."venyxui.lua")
-    elseif ur:match("AkaliNotif.lua") then
-        return old(base_url.."akalinotif.lua")
-    else
+        args[2] = base_url.."venyxui.lua"
+    elseif url:match("AkaliNotif.lua") then
+        args[2] = base_url.."akalinotif.lua"
+    elseif url:match("verify") then
         return "309569542"
     end
-    
-    return old(...)
+
+    return old(unpack(args))
 end)
 
 _, Protected_by_MoonSecV2, Discord = 'discord.gg/gQEH2uZxUk'

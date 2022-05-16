@@ -1,3 +1,5 @@
+-- credit to JayBurd(@837500939795431464) for original finding of correct response
+
 local base_url = "https://raw.githubusercontent.com/SpiritXmas/lua-cracks/main/ezpets/"
 
 local old; old = hookfunction(game.HttpGet, function(self, url)

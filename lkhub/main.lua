@@ -17,8 +17,6 @@ local old; old = hookfunction(game.HttpGet, function(self, url)
     elseif url:match("/s/") then
         return old(self, scripts_directory..url:match("/s/(.*)$"))
     end
-
-    return old(self, url)
 end)
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/SpiritXmas/lua-cracks/main/lkhub/dependencies/loader.lua"))()

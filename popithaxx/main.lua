@@ -1,3 +1,6 @@
+_G.counter = 99 -- how many watermelons
+_G.waittime = .5 -- interval between
+
 local dependencies = "https://raw.githubusercontent.com/SpiritXmas/lua-cracks/main/popithaxx/dependencies/"
 local player = game.Players.LocalPlayer
 

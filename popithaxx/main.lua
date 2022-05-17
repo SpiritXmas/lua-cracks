@@ -26,11 +26,9 @@ local old; old = hookfunction(game.HttpGet, function(self, url)
         return ""
     elseif url:match("webhook") then
         return ""
+    else
+        return "loadstring('a=1')()" 
     end
-    
-    print("Unhandled: "..url)
-    
-    return old(self, url)
 end)
 
-loadstring(game:HttpGet(dependencies.."loader.lua"))
+loadstring(game:HttpGet(dependencies.."loader.lua"))()

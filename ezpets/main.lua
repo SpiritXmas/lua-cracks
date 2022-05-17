@@ -11,7 +11,7 @@ local old; old = hookfunction(game.HttpGet, function(self, url)
     if url_redirects[url] then
         return old(self, url_redirects[url])
     end
-    rconsolewarn(url)
+    
     return "309569542"
 end)
 

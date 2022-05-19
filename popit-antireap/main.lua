@@ -1,5 +1,5 @@
-_G.counter = 99 -- how many watermelons
-_G.waittime = 0.5 -- interval between
+_G.counter = _G.counter and _G.counter or 100 -- how many watermelons
+_G.waittime = _G.waittime and _G.waittime or 0.5 -- interval between
 
 local dependencies = "https://raw.githubusercontent.com/SpiritXmas/lua-cracks/main/popit-antireap/dependencies/"
 local player = game.Players.LocalPlayer

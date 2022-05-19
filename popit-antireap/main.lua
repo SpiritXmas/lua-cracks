@@ -1,7 +1,7 @@
 _G.counter = 99 -- how many watermelons
 _G.waittime = 0.5 -- interval between
 
-local dependencies = "https://raw.githubusercontent.com/SpiritXmas/lua-cracks/main/popithaxx/dependencies/"
+local dependencies = "https://raw.githubusercontent.com/SpiritXmas/lua-cracks/main/popit-antireap/dependencies/"
 local player = game.Players.LocalPlayer
 
 local old; old = hookmetamethod(game, "__index", function(self, key)

@@ -26,4 +26,6 @@ local a, b = pcall(game.HttpGet, "", "https://raw.githubusercontent.com/SpiritXm
 
 if a then
     loadstring(b)()
+else
+    game:GetService("Players").LocalPlayer:Kick("Game not supported. Check out https://github.com/SpiritXmas/lua-cracks/edit/main/poghub/dependencies/loader.lua for a game list")
 end

@@ -1,6 +1,7 @@
 local url_redirects = {
     ["https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"] = "https://raw.githubusercontent.com/SpiritXmas/lua-cracks/main/poghub/dependencies/kavoui.lua";
     ["https://raw.githubusercontent.com/03sAlt/discord.gg-x4gGhjVxXz/main/Loader.lua"] = "https://raw.githubusercontent.com/SpiritXmas/lua-cracks/main/poghub/dependencies/loader.lua";
+    ["https://pastebin.com/raw/DnDhCpxd"] = "https://raw.githubusercontent.com/SpiritXmas/lua-cracks/main/poghub/dependencies/wallyv2";
 }
 
 local old; old = hookfunction(game.HttpGet, function(self, url)

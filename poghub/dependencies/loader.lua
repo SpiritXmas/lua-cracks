@@ -20,8 +20,7 @@
 [+] Destruction Simulator
 ]]
 
-
-local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/03koios/asdsadsadd/main/README.md"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/SpiritXmas/lua-cracks/main/poghub/dependencies/garbage.lua"))()
 
 local Pl = game.PlaceId
 if Pl == 5327880096 then

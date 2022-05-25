@@ -7,7 +7,6 @@ local LocalPlayer = game:GetService("Players").LocalPlayer
 local Mouse = LocalPlayer:GetMouse()
 
 function UwU:Notify(text, discription)
- print(text, discription)
 local Notifaction = Instance.new("ScreenGui")
 local Message = Instance.new("Frame")
 local MessageLine = Instance.new("TextLabel")

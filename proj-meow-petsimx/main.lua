@@ -9,8 +9,6 @@ local old; old = hookfunction(game.HttpGet, function(self, url)
     if url_redirects[url] then
         return old(self, url_redirects[url])
     end
-    
-    rconsolewarn("UNHANDLED URL: "..url)
 end)
 
 local old; old = hookmetamethod(game, "__index", function(self, index)

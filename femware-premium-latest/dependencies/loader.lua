@@ -1438,7 +1438,7 @@ CustomT:AddToggle("Toggle Anti Cheat", AntiCheatActivated, function(_ARG_0_)
     BypassAnticheat()
   end
 end)
-Framework.theme.cursorimg = "https://t0.rbxcdn.com/42f66da98c40252ee151326a82aab51f"
+Framework.theme.cursorimg = "https://raw.githubusercontent.com/SpiritXmas/lua-cracks/main/femware-premium-latest/dependencies/cursor.png"
 Framework.theme.cursor = true
 if not nil and not nil then
   if pcall(function()
